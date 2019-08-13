@@ -1,13 +1,14 @@
 <template>
   <div>
-    <div class="title">热销推荐</div>
+    <div class="title">周末去哪</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
-        <img class="item-img" :src="item.imgUrl" alt="">
+      <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
+        <div class="item-img-wrapper">
+          <img class="item-img" :src="item.imgUrl" alt="">
+        </div>  
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
-          <button class="item-button">查看详情</button>
         </div>
       </li>
     </ul>
@@ -16,26 +17,26 @@
 
 <script>
 export default {
-  name: 'HomeRecommend',
+  name: 'HomeWeekend',
   data () {
     return {
-      recommendList: 
+      weekendList: 
       [
         {
           id: '0001',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/1504/47/4730a0c01664b63d.water.jpg_200x200_d7f52253.jpg',
+          imgUrl: 'https://imgs.qunarzz.com/p/p48/201302/28/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg',
           title: '武汉海昌极地海洋公园',
           desc: 'hwhei'
         },
         {
           id: '0002',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/201405/27/11a29c646d897af77648bc3d98949107.jpg_200x200_0b6014b8.jpg',
-          title: '武汉九峰森林动物园',
+          imgUrl: 'https://imgs.qunarzz.com/p/p66/201304/17/384810d022dd28f793835fbb.jpg_256x160_6a7ec251.jpg',
+          title: '含往返飞机票（含住宿）',
           desc: 'adasdfi'
         },{
           id: '0003',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/1509/e4/13982f434b44af687916965e351c02fc.water.jpg_200x200_01e8588f.jpg',
-          title: '金龙水寨旅游景区',
+          imgUrl: 'https://imgs.qunarzz.com/p/p3/1809/e5/59de4bd338291802.jpg_256x160_98c152cd.jpg',
+          title: '武汉往返火车票+3晚住宿',
           desc: 'asdgfhwhei'
         }
       ]
@@ -50,33 +51,19 @@ export default {
     line-height: .8rem
     background: #eee
     text-indent: .2rem
-
-  .item
+  .item-img-wrapper
     overflow: hidden
-    display: flex
-    height: 1.9rem
+    height: 0
+    padding-bottom: 33.9%
     .item-img
-      width: 1.7rem
-      height: 1.7rem 
-      padding: .4em
-      border-radius: .3rem
-    .item-info
-       flex: 1
-       padding: .1rem
-       min-width: 0
-       .item-title
-        line-height: .54rem
-        font-size: .32rem
-        ellipsis()
-      .item-desc
-        line-height: .4rem
-        color: #ccc
-      .item-button
-        line-height: .44rem
-        margin-top: .16rem
-        background: #ff9300
-        padding: 0 .2rem
-        border-radius: .06rem
-        color: #fff
-
+      width: 100%
+  .item-info
+      padding: .1rem
+    .item-title
+      line-height: .54rem
+      font-size: .32rem
+      ellipsis()
+    .item-desc
+      line-height: .4rem
+      color: #ccc
 </style>
