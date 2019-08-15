@@ -13,11 +13,7 @@ export default {
   .search
     padding: 0 .1rem
     height: .72rem
-<<<<<<< HEAD
     background: $bgColor
-=======
-    background: $bgColor 
->>>>>>> city-list
     .search-input
       box-sizing: border-box
       width: 100%
